@@ -1,0 +1,19 @@
+version: 2
+
+phases:
+  install:
+    commands:
+      - echo Installing node latest
+      - curl -sL https://deb.nodesource.com/setup_14.x | bash -
+      - apt -y install nodejs
+  pre_build:
+    commands:
+      - echo Installing dependencies...
+      - npx create-react-app my-app
+      - cd my-app
+artifacts:
+  files:
+    - "**/*"
+  discard-paths: no
+  base-directory: dist
+

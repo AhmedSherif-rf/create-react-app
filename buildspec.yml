@@ -9,7 +9,7 @@ phases:
   pre_build:
     commands:
       - echo Installing dependencies...
-      - npx create-react-app my-app
+      - npx react-s3-codePipline my-app
       - cd my-app
 artifacts:
   files:
